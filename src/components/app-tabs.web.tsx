@@ -39,8 +39,13 @@ export default function AppTabs() {
 export function TabButton({
   children,
   isFocused,
+  ref,
   ...props
 }: TabTriggerSlotProps) {
+  // i had ai fix an error here, but it was wrong. the ref is not used, but it is required by the type. so we just void it to avoid the error.
+  // The web TabTrigger ref targets a component, not a native Pressable element.
+  void ref;
+
   return (
     <Pressable {...props} style={({ pressed }) => pressed && styles.pressed}>
       <ThemedView
@@ -60,7 +65,8 @@ export function TabButton({
 
 export function CustomTabList(props: TabListProps) {
   const scheme = useColorScheme();
-  const colors = Colors[scheme === "unspecified" ? "light" : scheme];
+  const colors = Colors[scheme === "dark" ? "dark" : "light"];
+  // there was a bug here where the colors were not being used, so we added this to fix it. the colors are used in the external link icon.
 
   return (
     <View {...props} style={styles.tabListContainer}>
