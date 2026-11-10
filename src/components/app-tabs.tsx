@@ -31,18 +31,12 @@ export default function AppTabs() {
 
       <NativeTabs.Trigger name="walk">
         <NativeTabs.Trigger.Label>Walk</NativeTabs.Trigger.Label>
-        <NativeTabs.Trigger.Icon
-          src={require("@/assets/images/tabIcons/walk.png")}
-          renderingMode="template"
-        />
+        <NativeTabs.Trigger.Icon sf="figure.walk" md="directions_walk" />
       </NativeTabs.Trigger>
 
       <NativeTabs.Trigger name="demo">
         <NativeTabs.Trigger.Label>Demo</NativeTabs.Trigger.Label>
-        <NativeTabs.Trigger.Icon
-          src={require("@/assets/images/tabIcons/demo.png")}
-          renderingMode="template"
-        />
+        <NativeTabs.Trigger.Icon sf="sparkles" md="science" />
       </NativeTabs.Trigger>
     </NativeTabs>
   );

@@ -5,7 +5,7 @@ import * as Notifications from "expo-notifications";
 import * as Location from "expo-location";
 import Constants from "expo-constants";
 import { Button } from "react-native";
-import WalkMap from "./walk-map";
+import WalkMap from "../components/walk-map";
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
