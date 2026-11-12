@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function WalkMap() {
   return (
     <View style={styles.container}>
-      <Text style={styles.message}>The map is available in the mobile app.</Text>
+      <Text style={styles.message}>Walk Map not supported on web</Text>
     </View>
   );
 }

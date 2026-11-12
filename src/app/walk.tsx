@@ -6,6 +6,7 @@ import * as Location from "expo-location";
 import Constants from "expo-constants";
 import { Button } from "react-native";
 import WalkMap from "../components/walk-map";
+import { Link } from "expo-router";
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
@@ -152,6 +153,9 @@ export default function Walkscreen() {
         2,
       )}`}</Text>
       <WalkMap />
+      <Link href="/walk-notes" style={{ marginTop: 20 }}>
+        <Text>Go to Walk Notes</Text>
+      </Link>
       <View style={{ alignItems: "center", justifyContent: "center" }}>
         <Text>
           Title: {notification && notification.request.content.title}{" "}
