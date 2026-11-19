@@ -20,10 +20,11 @@ Notifications.setNotificationHandler({
 async function schedulePushNotification() {
   await Notifications.scheduleNotificationAsync({
     content: {
-      title: "You've got mail! 📬",
-      body: "Here is the notification body",
+      title: "reminder",
+      body: "Hey come check in! 👋",
       data: { data: "goes here", test: { test1: "more data" } },
     },
+    // have a nice little reminder with user to remind them to log how their day went
     trigger: {
       type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,
       seconds: 2,
@@ -153,8 +154,8 @@ export default function Walkscreen() {
         2,
       )}`}</Text>
       <WalkMap />
-      <Link href="/walk-notes" style={{ marginTop: 20 }}>
-        <Text>Go to Walk Notes</Text>
+      <Link href="/mood-notes" style={{ marginTop: 20 }}>
+        <Text>Go to Mood-Notes</Text>
       </Link>
       <View style={{ alignItems: "center", justifyContent: "center" }}>
         <Text>
