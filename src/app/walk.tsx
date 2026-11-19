@@ -155,18 +155,8 @@ export default function Walkscreen() {
       )}`}</Text>
       <WalkMap />
       <Link href="/mood-notes" style={{ marginTop: 20 }}>
-        <Text>Go to Mood-Notes</Text>
+        <Link href="/mood-notes">Go to Mood-Notes</Link>
       </Link>
-      <View style={{ alignItems: "center", justifyContent: "center" }}>
-        <Text>
-          Title: {notification && notification.request.content.title}{" "}
-        </Text>
-        <Text>Body: {notification && notification.request.content.body}</Text>
-        <Text>
-          Data:{" "}
-          {notification && JSON.stringify(notification.request.content.data)}
-        </Text>
-      </View>
       <Button
         title="Press to schedule a notification"
         onPress={async () => {
